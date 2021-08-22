@@ -1,16 +1,19 @@
 $primary-color: #ffc87a;
 $text-color: #1a2b5f;
 $text-gray: #9ba2b9;
-html{
+
+html {
     font-size: 62.5%;
 }
+
 *,
-*::before, *::after{
+*::before,
+*::after {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -18,8 +21,8 @@ img {
     display: block;
     max-width: 100%;
 }
- 
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
     color: $text-color;
     line-height: 1.4;
@@ -39,76 +42,91 @@ body{
     height: $height;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1440px;
     margin: 0 auto;
 }
-.container{
+
+.container {
     margin: 0 auto;
     max-width: 1210px;
     padding-left: 20px;
     padding-right: 20px;
 }
-.header{
+
+.header {
     padding-top: 40px;
-    &__inner{
+
+    &__inner {
         @include flex(center, space-between);
     }
-    &__menu{
-        &-list{
+
+    &__menu {
+        &-list {
             @include flex(center);
         }
-        &-item{
+
+        &-item {
             margin-left: 50px;
-            &:last-child{
+
+            &:last-child {
                 margin-left: 70px;
             }
         }
-        &-link{
+
+        &-link {
             font-size: 16px;
             color: $text-color;
             transition: color 0.2s linear, border 0.2s linear;
-            &:hover{
+
+            &:hover {
                 color: $primary-color;
             }
         }
     }
 }
-.logo{
+
+.logo {
     font-size: 25px;
     font-weight: 600;
     color: $text-color;
-    &__text{
+
+    &__text {
         color: $primary-color;
     }
 }
-.banner{
+
+.banner {
     padding-top: 150px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 150px;
-    &__heading{
+
+    &__heading {
         font-weight: 700;
         font-size: 60px;
         margin-bottom: 20px;
     }
-    &__desc{
+
+    &__desc {
         font-size: 18px;
         font-weight: 300;
         margin-bottom: 40px;
     }
-    &__buttons{
+
+    &__buttons {
         display: flex;
         justify-content: center;
         align-items: stretch;
-        .btn{
+
+        .btn {
             margin: 0 10px;
         }
     }
 }
 
-.btn{
+.btn {
     cursor: pointer;
     outline: none;
     font-size: 16px;
@@ -118,140 +136,172 @@ body{
     display: inline-block;
     border: 0;
     background-color: transparent;
-    &--border{
+
+    &--border {
         border: 1px solid currentColor;
     }
-    &--rounded{
+
+    &--rounded {
         border-radius: 50px;
     }
-    &--primary{
+
+    &--primary {
         background: $primary-color;
-        &.has-shadow{
+
+        &.has-shadow {
             box-shadow: 0 10px 35px -5px $primary-color;
         }
     }
-    
+
 }
 
-.category{
-    &__list{
+.category {
+    &__list {
         @include flex(stretch, space-between, wrap);
     }
-    &__item{
+
+    &__item {
         width: calc(25% - 22.5px);
         // height: 400px;
         padding: 25px;
         background-color: #fff;
         border-radius: 20px;
-        &:first-child{
-            box-shadow: 0 20px 35px -5px rgba(255,151,195,0.25);
-        }&:nth-child(2){
-            box-shadow: 0 20px 35px -5px rgba(255,112,109,0.25);
-        }&:nth-child(3){
-            box-shadow: 0 20px 35px -5px rgba(133,152,255,0.25);
-        }&:last-child{
-            box-shadow: 0 20px 35px -5px rgba(255,200,122,0.25);
+
+        &:first-child {
+            box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+        }
+
+        &:nth-child(2) {
+            box-shadow: 0 20px 35px -5px rgba(255, 112, 109, 0.25);
+        }
+
+        &:nth-child(3) {
+            box-shadow: 0 20px 35px -5px rgba(133, 152, 255, 0.25);
+        }
+
+        &:last-child {
+            box-shadow: 0 20px 35px -5px rgba(255, 200, 122, 0.25);
         }
     }
-    &__image{
+
+    &__image {
         border-radius: inherit;
         object-fit: cover;
         @include size(100%, 230px);
         margin-bottom: 40px;
         @include flex(stretch, flex-start, nowrap, column);
     }
-    &__name, &__deltails{
-        
+
+    &__name,
+    &__deltails {
+
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    &__name{
+    &__name {
         font-size: 25px;
         font-weight: 500;
         margin-bottom: 25px;
     }
-    &__details{
+
+    &__details {
         font-size: 14px;
         color: $text-gray;
         margin-top: auto;
+
         i {
             font-size: 10px
         }
     }
 }
 
-.feature{
+.feature {
     padding-top: 180px;
-    &__item{
+
+    &__item {
         display: flex;
         align-items: center;
         margin-bottom: 150px;
-        &:nth-child(odd){
-            .feature__info{
+
+        &:nth-child(odd) {
+            .feature__info {
                 padding-left: 100px;
             }
         }
-        &:nth-child(even){
+
+        &:nth-child(even) {
             flex-direction: row-reverse;
-            .feature__info{
+
+            .feature__info {
                 padding-right: 100px;
             }
         }
     }
-    &__image, &__info{
+
+    &__image,
+    &__info {
         width: 50%;
     }
+
     // &__info{
     //     padding-left: 100px;
     // }
-    &__title{
+    &__title {
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 25px;
     }
-    &__desc{
+
+    &__desc {
         font-weight: 300;
         font-size: 14px;
         margin-bottom: 40px;
         line-height: 1.8;
     }
-    &-intro{
-        &__item{
+
+    &-intro {
+        &__item {
             font-weight: 600;
             font-size: 18px;
             margin-bottom: 20px;
             text-decoration: underline;
-            &--circle{
+
+            &--circle {
                 text-decoration: none;
                 position: relative;
-                padding-left:30px;
-                &:before{
+                padding-left: 30px;
+
+                &:before {
                     content: '';
                     position: absolute;
                     top: 50%;
-                    left:0;
+                    left: 0;
                     width: 20px;
                     height: 20px;
                     border-radius: 20px;
                     background-color: #ff6adf;
                     transform: translateY(-50%);
                 }
-                &:nth-child(2):before{
+
+                &:nth-child(2):before {
                     background-color: #92fa3c;
                 }
-                &:nth-child(3):before{
+
+                &:nth-child(3):before {
                     background-color: #1ec0f4;
                 }
-                &:last-child:before{
+
+                &:last-child:before {
                     background-color: #ff899c;
                 }
             }
         }
     }
-    &-best{
-        &__icon{
+
+    &-best {
+        &__icon {
             width: 50px;
             height: 50px;
             border-radius: 10px;
@@ -263,19 +313,24 @@ body{
             color: red;
             position: relative;
             z-index: 1;
-            &--green{
+
+            &--green {
                 color: #8fcd9b;
             }
-            &--purple{
+
+            &--purple {
                 color: #b482e4;
             }
-            &--yellow{
+
+            &--yellow {
                 color: #f8ce71;
             }
-            &--blue{
+
+            &--blue {
                 color: #b1e5eb;
             }
-            &:after{
+
+            &:after {
                 content: "";
                 width: 100%;
                 height: 100%;
@@ -288,138 +343,339 @@ body{
                 z-index: -1;
             }
         }
-        &__title{
+
+        &__title {
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 10px;
         }
-        &__desc{
+
+        &__desc {
             font-weight: 300;
         }
-        &__list{
+
+        &__list {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             flex-wrap: wrap;
             margin-bottom: -50px;
         }
-        &__item{
+
+        &__item {
             width: calc(50% - 30px);
             margin-bottom: 50px;
         }
     }
 }
-.text-clamp{
+
+.text-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    &--2{
+
+    &--2 {
         -webkit-line-clamp: 2;
     }
 }
-.partner{
+
+.partner {
     margin-bottom: 190px;
-    &__container{
+
+    &__container {
         max-width: 830px;
         text-align: center;
     }
-    &__title{
+
+    &__title {
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 70px;
         padding-bottom: 70px;
         border-bottom: 2px solid currentColor;
     }
-    &__list{
+
+    &__list {
         @include flex(center, space-between);
     }
 }
-.connect{
+
+.connect {
     text-align: center;
     margin-bottom: 170px;
-    &__title{
+
+    &__title {
         font-size: 25px;
         font-weight: bold;
         margin-bottom: 35px;
-    } 
-    &__notice{
+    }
+
+    &__notice {
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 60px;
-        span{
+
+        span {
             color: $primary-color;
         }
     }
-    &__list{
+
+    &__list {
         @include flex(stretch, space-between);
     }
-    &__item{
+
+    &__item {
         width: calc(25% - 30px);
     }
 }
-.subscribe{
+
+.subscribe {
     margin-bottom: 50px;
-    &__container{
+
+    &__container {
         @include flex(flex-start, space-between);
         padding-bottom: 80px;
         border-bottom: 2px solid currentColor;
     }
-    &__title, &__info{
+
+    &__title,
+    &__info {
         width: 50%;
     }
-    &__title{
+
+    &__title {
         font-size: 20px;
         font-weight: bold;
         max-width: 430px;
     }
-    &__form{
+
+    &__form {
         background-color: #f2f1f6;
         @include flex(center, space-between);
         padding: 20px;
         margin-bottom: 30px;
     }
-    &__input, &__button{
+
+    &__input,
+    &__button {
         padding: 0;
     }
-    &__input{
+
+    &__input {
         padding-right: 15px;
         border: none;
         outline: none;
         background-color: transparent;
         font-size: 14px;
-        font-family: 'Poppins',sans-serif;
+        font-family: 'Poppins', sans-serif;
         flex-grow: 1;
-        
+
     }
-    &__button{
+
+    &__button {
         background-color: transparent;
         border: 0;
         outline: none;
         font-size: 14px;
         font-weight: bold;
-        font-family: 'Poppins',sans-serif;
+        font-family: 'Poppins', sans-serif;
         cursor: pointer;
     }
+
     &__social i {
         margin-left: 40px;
         font-size: 20px;
         font-weight: bold;
     }
 }
-.footer{
-    .container{
+
+.footer {
+    &__container {
         @include flex(flex-start, space-between);
     }
-    &__item{
+
+    &__item {
         width: 25%;
     }
-    &__link{
+
+    &__link {
         color: $text-color;
         font-size: 14px;
         font-weight: 500;
         display: block;
         margin-bottom: 30px;
         width: fit-content;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .banner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        &__heading {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        &__desc {
+            font-size: 18px;
+        }
+
+        &__buttons>.btn {
+            font-size: 14px;
+        }
+    }
+
+    .category {
+        &__item {
+            width: calc(50% - 22.5px);
+            margin-bottom: 25px;
+        }
+    }
+
+    .feature {
+        padding-top: 100px;
+
+        &__title {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        &__item {
+            flex-direction: column;
+            margin-bottom: 80px;
+
+            &:nth-child(even) {
+                flex-direction: column;
+
+                .feature__info {
+                    padding: 0;
+                }
+            }
+
+            &:nth-child(odd) .feature__info {
+                padding: 0;
+            }
+        }
+
+        &__image,
+        &__info {
+            width: 100%;
+        }
+
+        &__image img {
+            margin: 0 auto 50px;
+        }
+
+        .btn {
+            display: block;
+            padding: 15px 50px;
+            width: fit-content;
+            margin: auto;
+        }
+    }
+
+    .partner {
+        &__title {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .header{
+        &__menu {
+            display: none;
+        }
+        .logo{
+            display: block;
+            font-size: 35px;
+            margin: auto;
+        }
+    }
+
+    .category {
+        &__item {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        &__image {
+            height: 200px;
+        }
+    }
+
+    .partner {
+        margin-bottom: 70px;
+
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            width: 50%;
+            margin-bottom: 20px;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .connect {
+        margin-bottom: 70px;
+
+        &__list {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+    }
+
+    .subscribe {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__title {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        &__info {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .banner {
+        &__heading {
+            font-size: 30px;
+        }
+
+        &__buttons>.btn {
+            font-size: 12px;
+        }
     }
 }
