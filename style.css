@@ -553,7 +553,9 @@ body {
   .subscribe__info {
     width: 100%;
   }
-
+  .subscribe__input {
+    padding-right: 10px;
+  }
   .footer__container {
     flex-wrap: wrap;
   }
